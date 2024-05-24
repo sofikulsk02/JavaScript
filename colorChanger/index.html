@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        box-sizing: border-box;
+        height: 40px;
+        width: 90\==px;
+        margin: 30px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+      }
+      .btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Changing colors</h1>
+    <div class="navbar">
+      <div class="btn">
+        <button id="Start">Start</button> <button id="Stop">Stop</button>
+      </div>
+    </div>
+    <script>
+      // random color generatio
+      const randomColor = function () {
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+      let intervalId;
+      //   console.log(randomColor());
+      const startChangingColor = function () {
+        intervalId = setInterval(changeBgColor, 1000);
+        function changeBgColor() {
+          document.body.style.backgroundColor = randomColor();
+        }
+      };
+
+      const stopChangingColor = function () {
+        clearInterval(intervalId);
+        intervalId = null;
+      };
+
+      document
+        .querySelector("#Start")
+        .addEventListener("click", startChangingColor);
+
+      document
+        .querySelector("#Stop")
+        .addEventListener("click", stopChangingColor);
+    </script>
+  </body>
+</html>

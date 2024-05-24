@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+      
+      <h1>Vanishing image</h1>
+    </header>
+    <section id="section">
+        <div class="three">
+            <div><img src="istockphoto-1097803956-170667a.webp" alt=""></div>
+            <div><img src="trees.webp" alt=""></div>
+            <div><img src="lotus.webp" alt=""></div>
+        </div>
+        <div class="two">
+           <div> <img src="red flowers.webp" alt=""></div>
+            <div><img src="sunflower.webp" alt=""></div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('section').addEventListener('click',function(e){
+            let removeIt=e.target
+            removeIt.remove()
+        })
+        document.getElementById('section').addEventListener('click',function(e){
+          let removeIt=e.target;
+          removeIt.remove()
+        })
+    </script>
+  </body>
+</html>

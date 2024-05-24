@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const promiseOne = new Promise(function (resolve, reject) {
+        // DB call,Network
+        setTimeout(function () {
+          console.log("Async task is complete");
+          resolve();
+        }, 1000);
+      });
+      promiseOne.then(function () {
+        console.log("Promise consumed");
+      });
+
+      // const promiseThree = new Promise(function (resolve, reject) {
+      //   setTimeout(function () {
+      //     resolve({ username: "Chai", email: "chai@Example.com" });
+      //   }, 1000);
+      //   promiseThree.then(function (user) {
+      //     console.log(user);
+      //   });
+      // });
+
+      const promiseFour = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve({ username: "rajib", email: "rajibsk@gmail.com" });
+        });
+      }, 1000);
+      promiseFour.then(function (user) {
+        console.log(user);
+      });
+      const promiseFive = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve({
+            name: "Sofikul sk",
+            EnrollmrentNumber: "2301010116",
+            Data: "@gmail.com",
+          });
+        });
+      }, 1000);
+      promiseFive.then(function (DATA) {
+        console.log(DATA.name);
+      });
+      // const dataSet = "https://api.github.com/users/hiteshchoudhary";
+      // const Rajib = new Promise(function (resolve, reject) {
+      //   setTimeout(function () {
+      //     resolve(dataSet);
+      //   });
+      //   Rajib.then(function (Sofikul) {
+      //     console.log(Sofikul);
+      //   });
+      // }, 1000);
+      const promiseSix = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve({
+            username: "rajib seikh",
+            roll: "123123",
+            data: "this is the data",
+            name: "sofikul@sk",
+          });
+        });
+      }, 1000);
+      promiseSix.then(function (table) {
+        console.log(table);
+      });
+    </script>
+  </body>
+</html>

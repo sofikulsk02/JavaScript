@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai or code</h1>
+    <button id="Stop">Stop</button>
+    <script>
+      //   const sayRajib = function () {
+      //     console.log("this is rajib");
+      //   };
+      //   const changeText = function () {
+      //     document.querySelector("h1").innerHTML = "best js series";
+      //   };
+      //     setTimeout(changeText, 2000);
+      //   const changeMe = setTimeout(changeText, 2000);
+      //   document.querySelector("#Stop").addEventListener("click", function () {
+      //     clearTimeout(changeMe);
+      //     console.log("Stopped");
+      //   });
+      //   const changetext = function () {
+      //     document.querySelector("h1").innerHTML =
+      //       "This is the very first time after one year i din't messege her";
+      //   };
+      //   const change_name = setTimeout(changetext, 3000);
+      //   document.querySelector("#Stop").addEventListener("click", function () {
+      //     clearTimeout(change_name);
+      //     console.log("you did the right thing");
+      //   });
+      const name = function () {
+        document.querySelector("h1").innerHTML =
+          "this should be the right approach";
+      };
+      const name_rajib = setTimeout(name, 3000);
+      document.querySelector("#Stop").addEventListener("click", function () {
+        clearTimeout(name_rajib);
+        console.log("Yeah boy i'am proud of you");
+      });
+    </script>
+  </body>
+</html>

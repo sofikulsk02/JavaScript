@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      li img {
+        box-sizing: border-box;
+        height: 120px;
+        width: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="images">
+      <ul>
+        <li><img src="469936.jpg" id="mountains" /></li>
+
+        <li>
+          <img
+            id="lakes"
+            src="desktop-wallpaper-norway-lofoten-islands-europe-mountains-sea-sunrise-nature-high-resolution-europe-landscape.jpg"
+            alt="lakes"
+          />
+        </li>
+        <li>
+          <img
+            id="flowers"
+            src="may-birth-flower-lily-of-the-valley.jpg"
+            alt=""
+          />
+        </li>
+        <li><img id="valley" src="valley.webp" alt="" /></li>
+        <a id="google" href="https://google.com">Google</a>
+      </ul>
+    </div>
+    <script>
+      //   document.getElementById("mountains").onclick = function () {
+      //     alert("mountain clicked");
+      //     document.getElementById("flowers").addEventListener(
+      //       "click",
+      //       function () {
+      //         alert("flowers clicked");
+      //       },
+      //       false
+      //     );
+      //     document.getElementById("valley").addEventListener(
+      //       "click",
+      //       function () {
+      //         alert("valley clicked");
+      //       },
+      //       false
+      //     );
+      //   document.getElementById("images").addEventListener(
+      //     "click",
+      //     function (e) {
+      //       console.log("clicked the ul");
+      //     },
+      //     false
+      //   );
+      //   document.getElementById("mountains").addEventListener(
+      //     "click",
+      //     function (e) {
+      //       console.log("mountain this is ");
+      //     },
+      //     false
+      //   );
+      //   document
+      //     .getElementById("flowers")
+      //     .addEventListener("click", function (e) {
+      //       console.log("i know that i like liza a lot");
+      //     });
+      //   document.getElementById("valley").addEventListener("click", function (e) {
+      //     console.log("ya allah help me to overcome from this situation");
+      //   });
+      //   document.getElementById("valley").addEventListener(
+      //     "click",
+      //     function () {
+      //       alert("no rajib no you can not do the same mistake again");
+      //     },
+      //     false
+      //   );
+      //   document.getElementById("google").addEventListener(
+      //     "click",
+      //     function (e) {
+      //       e.preventDefault();
+      //       console.log("google clicked");
+      //     },
+      //     false
+      //   );
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+          console.log(e);
+          console.log(e.target);
+          console.log(e.target.parentNode);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
