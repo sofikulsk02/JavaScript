@@ -23,3 +23,9 @@ const obj3 = { obj1, obj2 };
 console.log(obj3);
 const obj4 = Object.assign({}, obj1, obj2); //good practice
 console.log(obj4);
+
+const obj5 = { ...obj1, ...obj2 };
+console.log(obj5);
+
+console.log(Object.keys(tinderUser)); //important
+console.log(Object.values(tinderUser));
