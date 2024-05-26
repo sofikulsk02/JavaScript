@@ -3,6 +3,7 @@ console.log(score);
 
 const balance = new Number(100); //specially it's telling that it's a number
 console.log(balance);
+console.log(typeof balance);
 console.log(balance.toString()); //by converting the number into string we can use properties of strings
 console.log(balance.toString().length); //length of the string
 console.log(balance.toFixed(2)); //it will help to give value after the decimal
@@ -13,3 +14,12 @@ console.log(otherNumber.toPrecision(3)); //important it will only give priorties
 
 const hundreds = 1000000;
 console.log(hundreds.toLocaleString("en-IN")); //it will convert the number into indian number system with the help of commas
+
+console.log(typeof Number);
+const rajib = new Number("100");
+console.log(rajib);
+console.log(typeof rajib);
+const soma = rajib.toString();
+console.log(soma);
+console.log(typeof soma);
+console.log(typeof toString);
