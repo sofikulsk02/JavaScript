@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color changer</title>
+  </head>
+  <body>
+    <h1 style="text-align: center" id="heading">Infinte colors</h1>
+    <div class="buttons" style="display: flex; justify-content: space-around">
+      <button id="Start">Start</button>
+      <button id="Stop">Stop</button>
+    </div>
+    <script>
+      function randomcolor() {
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.round(Math.random() * 16)];
+        }
+        return color;
+      }
+      function headingColor() {
+        const hex = "0123456789ABCDEF";
+        let headColor = "#";
+        for (let i = 0; i < 6; i++) {
+          headColor += hex[Math.floor(Math.random() * 16)];
+        }
+        return headColor;
+      }
+      console.log(headingColor());
+      function headingColorChange() {
+        document.querySelector("#heading").style.color = headingColor();
+      }
+      let intervalid;
+      function bgColorChange() {
+        document.body.style.backgroundColor = randomcolor();
+      }
+      function startChangingColor() {
+        intervalid = setInterval(bgColorChange, 1000);
+        headinginterval = setInterval(headingColorChange, 1000);
+      }
+      function stopChangingColor() {
+        clearInterval(intervalid);
+        clearInterval(headinginterval);
+        intervalid = null;
+      }
+
+      document
+        .querySelector("#Start")
+        .addEventListener("click", startChangingColor);
+      document
+        .querySelector("#Stop")
+        .addEventListener("click", stopChangingColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color generator</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1 style="text-align: center">
+      Every second we are generating new colors
+    </h1>
+    <div class="buttons" style="display: flex; justify-content: space-around">
+      <button id="btn1">start</button> <button id="btn2">stop</button>
+    </div>
+  </body>
+  <script>
+    const randomNum = Math.floor(Math.random() * 1000000 + 1);
+    let color_body = `#${randomNum}`;
+
+    const start = document.querySelector("#btn1");
+    start.addEventListener("click", (e) => {
+      setInterval(() => {
+        document.body.style.backgroundColor = color_body;
+      });
+    });
+    const stop = document.querySelector("#btn2");
+    stop.addEventListener("click", (e) => {
+      setInterval(() => {
+        document.body.style.backgroundColor = "black";
+      }, 1000);
+    });
+  </script>
+</html>

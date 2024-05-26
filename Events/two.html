@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+      const start = document.querySelector("#start");
+      start.addEventListener("click", () => {
+        const change = setTimeout(() => {
+          console.log("This is a javaScript tutorial");
+        }, 2000);
+      });
+      const button = document.querySelector("#stop");
+      button.addEventListener("click", () => {
+        clearTimeout(start, 1000);
+      });
+    </script>
+  </body>
+</html>
