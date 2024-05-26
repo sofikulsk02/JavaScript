@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color changer</title>
+    <style>
+      .btn {
+        border: 1px solid white;
+        height: 30px;
+        width: 50px;
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1 style="text-align: center">Color Changer</h1>
+    <div
+      class="all_buttons"
+      style="display: flex; justify-content: space-around; height: 30px"
+    >
+      <div class="btn" id="one" style="background-color: red">red</div>
+      <div class="btn" id="two" style="background-color: green">green</div>
+      <div class="btn" id="three" style="background-color: blue">blue</div>
+      <div class="btn" id="four" style="background-color: yellow">yellow</div>
+    </div>
+  </body>
+  <script>
+    // const button1 = document.querySelector("#one");
+    // button1.addEventListener("click", (event) => {
+    //   console.log(event.target);
+    //   if (event.target.id == "one") {
+    //     document.body.style.backgroundColor = "red";
+    //   }
+    // });
+    // const button2 = document.querySelector("#two");
+    // button2.addEventListener("click", (event) => {
+    //   console.log(event.target);
+    //   if (event.target.id == "two") {
+    //     document.body.style.backgroundColor = "green";
+    //   }
+    // });
+    // const button3 = document.querySelector("#three");
+    // button3.addEventListener("click", (event) => {
+    //   console.log(event.target);
+    //   if (event.target.id == "three") {
+    //     document.body.style.backgroundColor = "blue";
+    //   }
+    // });
+    // const button4 = document.querySelector("#four");
+    // button4.addEventListener("click", (event) => {
+    //   console.log(event.target);
+    //   if (event.target.id == "four") {
+    //     document.body.style.backgroundColor = "yellow";
+    //   }
+    // });
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        if (e.target.id == "one") {
+          document.body.style.backgroundColor = "red";
+        }
+        if (e.target.id == "two") {
+          document.body.style.backgroundColor = "green";
+        }
+        if (e.target.id == "three") {
+          document.body.style.backgroundColor = "blue";
+        }
+        if (e.target.id == "four") {
+          document.body.style.backgroundColor = "yellow";
+        }
+      });
+    });
+  </script>
+</html>
