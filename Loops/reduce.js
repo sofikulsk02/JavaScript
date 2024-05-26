@@ -9,3 +9,27 @@ const mySum = myNum.reduce((acc, curr) => {
 }, initialValue);
 
 console.log(mySum);
+
+const eCommerce = [
+  {
+    course: "Python",
+    price: 999,
+  },
+  {
+    course: "Data scince",
+    price: 12999,
+  },
+  {
+    course: "Mobile",
+    price: 5999,
+  },
+  {
+    course: "WebDev",
+    price: 1299,
+  },
+];
+
+const taotalBillToPay = eCommerce.reduce((acc, item) => {
+  return acc + item.price;
+}, 0);
+console.log(taotalBillToPay);
