@@ -9,3 +9,7 @@
 ((name) => {
   console.log(`this is db2 ${name}`);
 })("Rajib sk");
+
+(function () {
+  console.log("This is something new");
+})();
