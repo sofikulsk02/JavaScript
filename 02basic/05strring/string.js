@@ -4,10 +4,11 @@ let str3 = str1 + str2;
 console.log(str3);
 console.log(`this is a modern way to write a string `);
 const gameName = new String("rajib-sk");
+console.log(typeof String);
 console.log(gameName);
+console.log(typeof gameName);
 
 console.log(gameName[0]);
-
 console.log(gameName.length);
 console.log(gameName.toUpperCase());
 console.log(gameName.charAt(2)); //checking which character is present at index 2
