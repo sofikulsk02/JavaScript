@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* border: 2px solid red; */
+        height: 50vh;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+      }
+      body {
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+      }
+      #content {
+        text-align: center;
+        border: 2px solid yellow;
+        justify-content: center;
+        height: 80%;
+        width: 80%;
+        color: rgb(251, 255, 0);
+        background: linear-gradient(
+          rgb(24, 47, 92),
+          rgb(44, 44, 237),
+          rgb(24, 47, 92)
+        );
+        box-shadow: 0 0 5px #03e9f4, 0 0 20px #03e9f4, 0 0 50px #03e9f4;
+        font-family: cursive;
+        font-weight: bolder;
+        border-radius: 20px;
+      }
+      #btn {
+        font-family: cursive;
+        font-weight: bolder;
+        height: 30px;
+        width: 110px;
+        margin-left: 610px;
+        background-color: rgb(140, 255, 0);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(24, 47, 92)">
+    <div class="container">
+      <div id="content"></div>
+    </div>
+    <button id="btn">Joke suna</button>
+    <script>
+      // const url = "https://official-joke-api.appspot.com/random_joke";
+      // const getJokes = async () => {
+      //   let response = await fetch(url);
+      //   let data = response.json();
+      //   data.then(function (res) {
+      //     console.log(`setup:${res.setup}`);
+      //     console.log(`punchline:${res.punchline}`);
+      //   });
+      // };
+      // getJokes();
+      // const jokesuna = document.querySelector("#btn");
+      // const text = document.querySelector("#content");
+      // jokesuna.addEventListener("click", async function (e) {
+      //   text.innerHTML = getJokes();
+      // });
+      const url = "https://official-joke-api.appspot.com/random_joke";
+
+      const getJokes = async () => {
+        let response = await fetch(url);
+        let data = await response.json(); // Await here to get the actual data
+        return data; // Return the joke data
+      };
+
+      const jokesuna = document.querySelector("#btn");
+      const text = document.querySelector("#content");
+
+      jokesuna.addEventListener("click", async function (e) {
+        const joke = await getJokes(); // Await the joke data here
+        text.innerHTML = `<p>setup: ${joke.setup}</p><p>punchline: ${joke.punchline}</p>`;
+      });
+    </script>
+  </body>
+</html>
